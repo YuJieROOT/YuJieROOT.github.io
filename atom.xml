@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-01-22T07:41:20.818Z</updated>
+    <updated>2020-01-22T07:44:08.100Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -86,7 +86,7 @@
 <pre><code class="language-c++"> cin&gt;&gt;s;//不能读入空格，以空格、制表符、回车符作为结束标志
  getline(cin,s);//可以读入空格和制表符，以回车符作为结束标志
 </code></pre>
-<h2 id="3查找t是否为s的子串">**3.查找t是否为s的子串:</h2>
+<h2 id="3查找t是否为s的子串"><strong>3.查找t是否为s的子串:</strong></h2>
 <pre><code>s.find(t);//如果t是s的子串则返回首次匹配的位置，否则返回 string::npos 或 -1
 </code></pre>
 <h2 id="4对string类型数组排序"><strong>4.对string类型数组排序</strong></h2>
