@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-01-22T07:04:29.801Z</updated>
+    <updated>2020-01-22T07:22:26.588Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -11,14 +11,63 @@
     <icon>https://yujieroot.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
     <entry>
+        <title type="html"><![CDATA[String tips]]></title>
+        <id>https://yujieroot.github.io/post/string-tips</id>
+        <link href="https://yujieroot.github.io/post/string-tips">
+        </link>
+        <updated>2020-01-22T07:13:46.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1字符串逆转"><strong>1.字符串逆转：</strong></h2>
+<p>头文件：</p>
+<pre><code class="language-c++"> #include&lt;algorithm&gt;
+</code></pre>
+<pre><code class="language-c++">示例：string:reverse(s.begin(),s.end())  
+     array:reverse(a,a+len)
+</code></pre>
+<h2 id="2string类型的读入"><strong>2.string类型的读入:</strong></h2>
+<pre><code class="language-c++"> cin&gt;&gt;s;//不能读入空格，以空格、制表符、回车符作为结束标志
+ getline(cin,s);//可以读入空格和制表符，以回车符作为结束标志
+</code></pre>
+<h2 id="3查找t是否为s的子串">**3.查找t是否为s的子串:</h2>
+<pre><code>s.find(t);//如果t是s的子串则返回首次匹配的位置，否则返回 string::npos 或 -1
+</code></pre>
+<h2 id="4对string类型数组排序"><strong>4.对string类型数组排序</strong></h2>
+<pre><code class="language-c++">string s[100];
+sort(s,s+n,cmp);
+int cmp(string a,string b)
+{
+    return a&lt;b; //或a&gt;b;
+}
+</code></pre>
+<h2 id="5字符串提取"><strong>5.字符串提取</strong></h2>
+<pre><code class="language-c++">string a=s.substr(0,4);
+</code></pre>
+<h2 id="6-插入字符串"><strong>6. 插入字符串</strong></h2>
+<pre><code class="language-c++">str1.insert(pos1,str2);
+str1.insert(pos1,str2,pos2,len2);
+str1.insert(pos1,numchar,char); //numchar是插入次数，char是要插入的字符。
+</code></pre>
+<h2 id="7-替换字符串"><strong>7. 替换字符串</strong></h2>
+<pre><code class="language-c++">str1.replace(pos1,str2);
+str1.replace(pos1,str2,pos2,len2);
+</code></pre>
+<h2 id="8-删除字符串"><strong>8. 删除字符串</strong></h2>
+<pre><code class="language-c++">str.erase(pos,len)
+str.clear();
+</code></pre>
+<h2 id="9-交换字符串"><strong>9. 交换字符串</strong></h2>
+<pre><code class="language-c++">swap(str1,str2);
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Math tips]]></title>
         <id>https://yujieroot.github.io/post/math-tips</id>
         <link href="https://yujieroot.github.io/post/math-tips">
         </link>
         <updated>2020-01-22T06:50:17.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1完全平方数的性质">1.完全平方数的性质：</h2>
-<pre><code> 一个非完全平方数，因数个数肯定为偶数 例：8:（1,2,4,8）
- 一个完全平方数，因数个数肯定为奇数 例：9:（1,3,9）
+<pre><code>一个非完全平方数，因数个数肯定为偶数 例：8:（1,2,4,8）
+一个完全平方数，因数个数肯定为奇数 例：9:（1,3,9）
 </code></pre>
 ]]></content>
     </entry>

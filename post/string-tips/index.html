@@ -54,7 +54,6 @@
 
 <body>
     <div class="wrapper">
-
         <header>
     <nav class="navbar">
         <div class="container">
@@ -163,50 +162,198 @@
 </script>
             <div class="main">
                 <div class="container">
-                    <div class="intro">
-                        <div class="avatar">
-                            <a href="https://yujieroot.github.io/"><img src="https://yujieroot.github.io//images/avatar.png?v=1579677742321"></a>
-                        </div>
-                        <div class="nickname">
-                            root
-                        </div>
-                        <div class="description">
-                            五道口的随机森林
-                        </div>
-                        <div class="links">
-                            
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                String tips
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    🎮&🍺4A ブログ
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2020-01-22</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">1.1 mins</a></span>
+                                <span class="post-words">words:<a href="#">234</a></span>
                                 
-                                        
+                                    <span class="post-category">
+                                Category:
                                 
-                                        
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL">tips</a>
                                 
-                                        
-                                
-                                    <a class="link-item" href="https://github.com/YuJieROOT" title="github"><i class="fa fa-github"></i></a>
+                            </span>
                                     
-                                        
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    🎮&🍺4A ブログ
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-01-22</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">1.1 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">234</a></span>
                                 
-                                        
+                                    <span class="post-category">&#x5206;&#x7C7B;:
                                 
-                                        
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL">tips</a>
                                 
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="1字符串逆转"><strong>1.字符串逆转：</strong></h2>
+<p>头文件：</p>
+<pre><code class="language-c++"> #include&lt;algorithm&gt;
+</code></pre>
+<pre><code class="language-c++">示例：string:reverse(s.begin(),s.end())  
+     array:reverse(a,a+len)
+</code></pre>
+<h2 id="2string类型的读入"><strong>2.string类型的读入:</strong></h2>
+<pre><code class="language-c++"> cin&gt;&gt;s;//不能读入空格，以空格、制表符、回车符作为结束标志
+ getline(cin,s);//可以读入空格和制表符，以回车符作为结束标志
+</code></pre>
+<h2 id="3查找t是否为s的子串">**3.查找t是否为s的子串:</h2>
+<pre><code>s.find(t);//如果t是s的子串则返回首次匹配的位置，否则返回 string::npos 或 -1
+</code></pre>
+<h2 id="4对string类型数组排序"><strong>4.对string类型数组排序</strong></h2>
+<pre><code class="language-c++">string s[100];
+sort(s,s+n,cmp);
+int cmp(string a,string b)
+{
+    return a&lt;b; //或a&gt;b;
+}
+</code></pre>
+<h2 id="5字符串提取"><strong>5.字符串提取</strong></h2>
+<pre><code class="language-c++">string a=s.substr(0,4);
+</code></pre>
+<h2 id="6-插入字符串"><strong>6. 插入字符串</strong></h2>
+<pre><code class="language-c++">str1.insert(pos1,str2);
+str1.insert(pos1,str2,pos2,len2);
+str1.insert(pos1,numchar,char); //numchar是插入次数，char是要插入的字符。
+</code></pre>
+<h2 id="7-替换字符串"><strong>7. 替换字符串</strong></h2>
+<pre><code class="language-c++">str1.replace(pos1,str2);
+str1.replace(pos1,str2,pos2,len2);
+</code></pre>
+<h2 id="8-删除字符串"><strong>8. 删除字符串</strong></h2>
+<pre><code class="language-c++">str.erase(pos,len)
+str.clear();
+</code></pre>
+<h2 id="9-交换字符串"><strong>9. 交换字符串</strong></h2>
+<pre><code class="language-c++">swap(str1,str2);
+</code></pre>
+
                         </div>
-                    </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%80%86%E8%BD%AC"><strong>1.字符串逆转：</strong></a></li>
+<li><a href="#2string%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AF%BB%E5%85%A5"><strong>2.string类型的读入:</strong></a></li>
+<li><a href="#3%E6%9F%A5%E6%89%BEt%E6%98%AF%E5%90%A6%E4%B8%BAs%E7%9A%84%E5%AD%90%E4%B8%B2">**3.查找t是否为s的子串:</a></li>
+<li><a href="#4%E5%AF%B9string%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><strong>4.对string类型数组排序</strong></a></li>
+<li><a href="#5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96"><strong>5.字符串提取</strong></a></li>
+<li><a href="#6-%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2"><strong>6. 插入字符串</strong></a></li>
+<li><a href="#7-%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2"><strong>7. 替换字符串</strong></a></li>
+<li><a href="#8-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2"><strong>8. 删除字符串</strong></a></li>
+<li><a href="#9-%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2"><strong>9. 交换字符串</strong></a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>🎮&🍺4A ブログ</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://yujieroot.github.io/post/string-tips">https://yujieroot.github.io/post/string-tips</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>🎮&🍺4A ブログ</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://yujieroot.github.io/post/string-tips">https://yujieroot.github.io/post/string-tips</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL"># tips</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL"># tips</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                    
+                                        <a class="next" rel="next" href="https://yujieroot.github.io/post/math-tips">
+                                            Math tips
+                                        </a>
+                                        
+                        </section>
+                    </article>
                 </div>
-
+                
             </div>
-
-
     </div>
-</body>
-
+    </div>
+    </div>
+    
     <div id="player"></div>
     
         <footer id="footer" class="footer">
@@ -285,5 +432,10 @@
                     
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
 
 </html>
