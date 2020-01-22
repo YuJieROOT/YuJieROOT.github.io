@@ -165,7 +165,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                Math tips
+                                数组的初始化与定义
                             </h1>
                             <!--en-->
                             <div class="post-meta en">
@@ -176,8 +176,8 @@
                                 <span class="post-time">
                                 Date: <a href="#">2020-01-22</a>
                             </span>
-                                <span class="post-readtime">Reading Time:<a href="#">0.2 mins</a></span>
-                                <span class="post-words">words:<a href="#">53</a></span>
+                                <span class="post-readtime">Reading Time:<a href="#">0.5 mins</a></span>
+                                <span class="post-words">words:<a href="#">140</a></span>
                                 
                                     <span class="post-category">
                                 Category:
@@ -194,8 +194,8 @@
                                     🎮&🍺4A ブログ
                                 </a>
                                 <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-01-22</a></span>
-                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">0.2 &#x5206;&#x949F;</a></span>
-                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">53</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">0.5 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">140</a></span>
                                 
                                     <span class="post-category">&#x5206;&#x7C7B;:
                                 
@@ -206,17 +206,36 @@
                             </div>
                         </header>
                         <div class="post-content">
-                            <h2 id="1完全平方数的性质">1.完全平方数的性质：</h2>
-<pre><code>一个非完全平方数，因数个数肯定为偶数 例：8:（1,2,4,8）
-一个完全平方数，因数个数肯定为奇数 例：9:（1,3,9）
-</code></pre>
+                            <h2 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h2>
+<ol>
+<li>
+<p>​    <strong>直接初始化为0 or false</strong></p>
+</li>
+<li>
+<p>​    <strong>数组更大</strong></p>
+</li>
+</ol>
+<h2 id="1数组大小"><strong>1.数组大小</strong></h2>
+<ul>
+<li>全局数组能开到20000<em>20000</em></li>
+<li><em>函数中的char数组最大能开4</em>518028</li>
+<li>int最大能开到518028</li>
+<li>static能开到10<sup>7*10</sup>7//static和 全局开的是同一块空间</li>
+</ul>
+<h2 id="2在main中赋值"><strong>2.在main中赋值：</strong></h2>
+<ul>
+<li>头文件：#include<cstring></li>
+<li>初始化形式：memset(s(初始化数组名)，0(要替换的数字)sizeof(s))//多维数组同样  <strong>发现有时候赋值数组为0并不能得到满意的结果，但尝试用memset函数后结果正确</strong></li>
+</ul>
 
                         </div>
                         <div class="post-toc">
                             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#1%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8">1.完全平方数的性质：</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E6%9C%80%E5%A5%BD%E5%AE%9A%E4%B9%89%E5%9C%A8main%E5%A4%96"><strong>数组最好定义在main外：</strong></a></li>
+<li><a href="#1%E6%95%B0%E7%BB%84%E5%A4%A7%E5%B0%8F"><strong>1.数组大小</strong></a></li>
+<li><a href="#2%E5%9C%A8main%E4%B8%AD%E8%B5%8B%E5%80%BC"><strong>2.在main中赋值：</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -231,7 +250,7 @@
 
                             <p class="copyright-item">
                                 <span>Permalink:</span>
-                                <span><a href="https://yujieroot.github.io/post/math-tips">https://yujieroot.github.io/post/math-tips</a></span>
+                                <span><a href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</a></span>
                             </p>
 
                             <p class="copyright-item">
@@ -248,7 +267,7 @@
 
                             <p class="copyright-item">
                                 <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                <span><a href="https://yujieroot.github.io/post/math-tips">https://yujieroot.github.io/post/math-tips</a></span>
+                                <span><a href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</a></span>
                             </p>
 
                             <p class="copyright-item">
@@ -295,11 +314,15 @@
                         </section>
                         <section class="post-nav">
                             
-                                <a class="prev" rel="prev" href="https://yujieroot.github.io/post/string-tips">
-                                    String tips
+                                <a class="prev" rel="prev" href="https://yujieroot.github.io/post/pai-xu">
+                                    排序
                                 </a>
                                 
                                     
+                                        <a class="next" rel="next" href="https://yujieroot.github.io/post/string-tips">
+                                            String tips
+                                        </a>
+                                        
                         </section>
                     </article>
                 </div>

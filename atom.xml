@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-01-22T07:22:26.588Z</updated>
+    <updated>2020-01-22T07:41:03.238Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://yujieroot.github.io/images/avatar.png</logo>
     <icon>https://yujieroot.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
+    <entry>
+        <title type="html"><![CDATA[排序]]></title>
+        <id>https://yujieroot.github.io/post/pai-xu</id>
+        <link href="https://yujieroot.github.io/post/pai-xu">
+        </link>
+        <updated>2020-01-22T07:31:44.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="十大经典排序算法"><strong>十大经典排序算法</strong></h2>
+<pre><code>1.冒泡排序
+2.选择排序
+3.插入排序  
+//若无限制可随意用
+4.希尔排序
+5.归并排序
+6.快速排序
+7.堆排序
+8.计数排序    
+9.桶排序
+10.基数排序
+</code></pre>
+<h2 id="时间复杂度"><strong>时间复杂度:</strong></h2>
+<ul>
+<li>平方阶O(n2)排序，各类简单排序：插入、选择和冒泡排序；</li>
+<li>线性对数阶O(nlog2n)排序：快速排序、堆排序和归并排序；</li>
+<li>O(n+§)排序，§是介于0和1之间的常数：希尔排序；</li>
+<li>线性阶O(n)排序：基数排序，桶、箱排序；</li>
+</ul>
+<p><img src="https://yujieroot.github.io//post-images/1579678850699.png" alt="" loading="lazy"><img src="D:%5Cimage%5Csort.png" alt="" loading="lazy"></p>
+<h2 id="1冒泡排序"><strong>1.冒泡排序</strong></h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数组的初始化与定义]]></title>
+        <id>https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
+        <link href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
+        </link>
+        <updated>2020-01-22T07:27:04.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h2>
+<ol>
+<li>
+<p>​    <strong>直接初始化为0 or false</strong></p>
+</li>
+<li>
+<p>​    <strong>数组更大</strong></p>
+</li>
+</ol>
+<h2 id="1数组大小"><strong>1.数组大小</strong></h2>
+<ul>
+<li>全局数组能开到20000<em>20000</em></li>
+<li><em>函数中的char数组最大能开4</em>518028</li>
+<li>int最大能开到518028</li>
+<li>static能开到10<sup>7*10</sup>7//static和 全局开的是同一块空间</li>
+</ul>
+<h2 id="2在main中赋值"><strong>2.在main中赋值：</strong></h2>
+<ul>
+<li>头文件：#include<cstring></li>
+<li>初始化形式：memset(s(初始化数组名)，0(要替换的数字)sizeof(s))//多维数组同样  <strong>发现有时候赋值数组为0并不能得到满意的结果，但尝试用memset函数后结果正确</strong></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[String tips]]></title>
         <id>https://yujieroot.github.io/post/string-tips</id>
