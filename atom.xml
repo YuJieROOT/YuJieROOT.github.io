@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-01-29T08:02:29.726Z</updated>
+    <updated>2020-01-31T08:53:01.924Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://yujieroot.github.io/images/avatar.png</logo>
     <icon>https://yujieroot.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
+    <entry>
+        <title type="html"><![CDATA[容器使用]]></title>
+        <id>https://yujieroot.github.io/post/rong-qi-shi-yong</id>
+        <link href="https://yujieroot.github.io/post/rong-qi-shi-yong">
+        </link>
+        <updated>2020-01-31T08:51:05.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="priority_queue">priority_queue</h1>
+<h3 id="1头文件">1.<strong>头文件</strong></h3>
+<blockquote>
+<p>#include<queue><br>
+#include<algorithm></p>
+</blockquote>
+<h3 id="2-定义"><strong>2、定义</strong></h3>
+<blockquote>
+<p>priority_queue&lt;Type, Container, Functional&gt;<br>
+Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>
+</blockquote>
+<pre><code class="language-c++">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; a;     
+//大根
+priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
+//小根
+</code></pre>
+<blockquote>
+<p>如果不写后两个参数，那么容器默认用的是vector，比较方式默认用operator&lt;，也就是优先队列是大顶堆，队头元素最大。</p>
+</blockquote>
+<h2 id="万能库">万能库</h2>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[杂]]></title>
         <id>https://yujieroot.github.io/post/za</id>

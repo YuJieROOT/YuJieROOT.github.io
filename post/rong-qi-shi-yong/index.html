@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
 <title>
@@ -50,6 +51,7 @@
             
                 
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -158,29 +160,174 @@
 
     }
 </script>
-        <div class="main">
-            <div class="container">
-                <div class="post-wrap archive">
-                    
-                    
-                    <h3>
-                        2020
-                    </h3>
-                    
-                    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                容器使用
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    🎮&🍺4A ブログ
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2020-01-31</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">0.6 mins</a></span>
+                                <span class="post-words">words:<a href="#">123</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL">tips</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    🎮&🍺4A ブログ
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-01-31</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">0.6 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">123</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL">tips</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h1 id="priority_queue">priority_queue</h1>
+<h3 id="1头文件">1.<strong>头文件</strong></h3>
+<blockquote>
+<p>#include<queue><br>
+#include<algorithm></p>
+</blockquote>
+<h3 id="2-定义"><strong>2、定义</strong></h3>
+<blockquote>
+<p>priority_queue&lt;Type, Container, Functional&gt;<br>
+Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>
+</blockquote>
+<pre><code class="language-c++">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; a;     
+//大根
+priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
+//小根
+</code></pre>
+<blockquote>
+<p>如果不写后两个参数，那么容器默认用的是vector，比较方式默认用operator&lt;，也就是优先队列是大顶堆，队头元素最大。</p>
+</blockquote>
+<h2 id="万能库">万能库</h2>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+</code></pre>
 
-                    <article class="archive-item">
-                        <a class="archive-item-link" href="https://yujieroot.github.io/post/pai-xu">
-                            十大经典排序算法
-                        </a>
-                        <span class="archive-item-date">2020-01-22 </span>
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li><a href="#priority_queue">priority_queue</a><br>
+*
+<ul>
+<li><a href="#1%E5%A4%B4%E6%96%87%E4%BB%B6">1.<strong>头文件</strong></a></li>
+<li><a href="#2-%E5%AE%9A%E4%B9%89"><strong>2、定义</strong></a></li>
+<li><a href="#%E4%B8%87%E8%83%BD%E5%BA%93">万能库</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>🎮&🍺4A ブログ</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://yujieroot.github.io/post/rong-qi-shi-yong">https://yujieroot.github.io/post/rong-qi-shi-yong</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>🎮&🍺4A ブログ</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://yujieroot.github.io/post/rong-qi-shi-yong">https://yujieroot.github.io/post/rong-qi-shi-yong</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL"># tips</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL"># tips</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                    
+                                        <a class="next" rel="next" href="https://yujieroot.github.io/post/za">
+                                            杂
+                                        </a>
+                                        
+                        </section>
                     </article>
-                    
-                    
-                    
                 </div>
+                
             </div>
-        </div>
+    </div>
+    </div>
     </div>
     
     <div id="player"></div>
@@ -261,6 +408,10 @@
                     
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
-    </div>
+        </div>
 </body>
+<script>
+    scroll();
+</script>
+
 </html>
