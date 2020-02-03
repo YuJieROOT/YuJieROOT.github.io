@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-01-31T08:57:30.767Z</updated>
+    <updated>2020-02-03T04:35:25.742Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://yujieroot.github.io/images/avatar.png</logo>
     <icon>https://yujieroot.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
+    <entry>
+        <title type="html"><![CDATA[搜索]]></title>
+        <id>https://yujieroot.github.io/post/sou-suo</id>
+        <link href="https://yujieroot.github.io/post/sou-suo">
+        </link>
+        <updated>2020-02-03T04:30:34.000Z</updated>
+        <content type="html"><![CDATA[<p>一般题目会出现：一个点到另一个点需要走几步</p>
+<h2 id="bfs方向准备">bfs方向准备：</h2>
+<pre><code class="language-c++">int xx[]={0,1,0,-1},
+	yy[]={1,0,-1,0};
+</code></pre>
+<pre><code class="language-c++">for(int i=0;i&lt;4;i++)
+{
+	int dx = x.front()+xx[i];
+	int dy = y.front()+yy[i];
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[容器使用]]></title>
         <id>https://yujieroot.github.io/post/rong-qi-shi-yong</id>
