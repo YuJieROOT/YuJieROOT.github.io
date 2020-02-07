@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-03T04:35:25.742Z</updated>
+    <updated>2020-02-07T09:07:28.369Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -11,15 +11,20 @@
     <icon>https://yujieroot.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
     <entry>
-        <title type="html"><![CDATA[搜索]]></title>
+        <title type="html"><![CDATA[穷竭搜索]]></title>
         <id>https://yujieroot.github.io/post/sou-suo</id>
         <link href="https://yujieroot.github.io/post/sou-suo">
         </link>
         <updated>2020-02-03T04:30:34.000Z</updated>
-        <content type="html"><![CDATA[<p>一般题目会出现：一个点到另一个点需要走几步</p>
-<h2 id="bfs方向准备">bfs方向准备：</h2>
-<pre><code class="language-c++">int xx[]={0,1,0,-1},
-	yy[]={1,0,-1,0};
+        <content type="html"><![CDATA[<h2 id="核心思想">核心思想</h2>
+<blockquote></blockquote>
+<ol>
+<li>深度优先搜索（DFS）：从某个状态开始，不断转移，直至无法转移，回退到前一步，再继续转移到其他状态，直到找到最终解。通常采用递归函数或者栈（Stack）来实现。</li>
+<li>宽度优先搜索（BFS）：从初始状态开始，总是先搜索至距离初始状态近的状态。每个状态都只经过一次，因此复杂度为O(状态数*转移方式数)。通常采用循环或队列（Queue）实现。</li>
+</ol>
+<h2 id="方向准备">方向准备：</h2>
+<pre><code class="language-c++">int xx[]={0,0,1,-1},
+	yy[]={1,-1,0,0};
 </code></pre>
 <pre><code class="language-c++">for(int i=0;i&lt;4;i++)
 {
@@ -27,10 +32,121 @@
 	int dy = y.front()+yy[i];
 }
 </code></pre>
+<h2 id="dfs">DFS</h2>
+<blockquote>
+<p>一共有几条路径</p>
+</blockquote>
+<h2 id="例">例：</h2>
+<h3 id="1八皇后">1.八皇后</h3>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n,cnt;
+bool a[20];//列
+bool b[20];//右斜
+bool c[40];//左斜
+int s[20];
+
+void pr()
+{
+	for(int i=1;i&lt;=n;i++)
+    {
+		cout&lt;&lt;s[i]&lt;&lt;' ';
+	}
+	cout&lt;&lt;endl;
+	
+}
+void dfs(int x)
+{
+	if(x&gt;n)
+	{
+		cnt++;
+		pr();
+	}
+	else 
+	{
+		for(int i=1;i&lt;=n;i++)//行
+		{
+			if(!a[i]&amp;&amp;!b[x-i+n]&amp;&amp;!c[x+i])
+			{
+				a[i]=1;
+				b[x-i+n]=1;
+				c[x+i]=1;
+				s[x]=i;
+				dfs(x+1);
+				a[i]=0;
+				b[x-i+n]=0;
+				c[x+i]=0; 
+			}
+		}
+	}
+}
+ 
+int main()
+{
+	cin&gt;&gt;n;
+	dfs(1);
+	cout&lt;&lt;cnt;
+}
+</code></pre>
+<h3 id="2迷宫">2.迷宫</h3>
+<h4 id="题目背景">题目背景</h4>
+<blockquote></blockquote>
+<p>给定一个N*M方格的迷宫，迷宫里有T处障碍，障碍处不可通过。给定起点坐标和终点坐标，问: 每个方格最多经过1次，有多少种从起点坐标到终点坐标的方案。在迷宫中移动有上下左右四种方式，每次只能移动一个方格。数据保证起点上没有障碍。</p>
+<h4 id="输入格式">输入格式</h4>
+<blockquote></blockquote>
+<p>第一行N、M和T，N为行，M为列，T为障碍总数。第二行起点坐标SX,SY，终点坐标FX,FY。接下来T行，每行为障碍点的坐标。</p>
+<h4 id="代码">代码</h4>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n,m,t,sx,sy,fx,fy,cnt;
+bool vis[10][10];
+bool mp[10][10];
+int x[]={0,0,1,-1};
+int y[]={1,-1,0,0};
+
+void dfs(int sx,int sy)
+{
+	if(sx==fx&amp;&amp;sy==fy)
+	{
+		cnt++;
+		return;
+	}
+	for(int i=0;i&lt;4;i++)
+	{
+		int dx = sx + x[i];
+		int dy = sy + y[i];
+		if(!vis[dx][dy]&amp;&amp;dx&gt;=1&amp;&amp;dx&lt;=n&amp;&amp;dy&gt;=1&amp;&amp;dy&lt;=m&amp;&amp;!mp[dx][dy])
+		{
+			vis[dx][dy]=1;
+			dfs(dx,dy);
+			vis[dx][dy]=0;
+		}
+	}
+}
+int main()
+{
+	cin&gt;&gt;n&gt;&gt;m&gt;&gt;t&gt;&gt;sx&gt;&gt;sy&gt;&gt;fx&gt;&gt;fy;
+	while(t--)
+	{
+		int x,y;
+		cin&gt;&gt;x&gt;&gt;y;
+		mp[x][y]=1;
+	}
+	vis[sx][sy]=1;
+	dfs(sx,sy);
+	cout&lt;&lt;cnt;
+}
+</code></pre>
+<h2 id="bfs">BFS</h2>
+<blockquote>
+<p>一个点到另一个点需要走几步</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[容器使用]]></title>
+        <title type="html"><![CDATA[STL]]></title>
         <id>https://yujieroot.github.io/post/rong-qi-shi-yong</id>
         <link href="https://yujieroot.github.io/post/rong-qi-shi-yong">
         </link>
@@ -59,7 +175,7 @@ priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[杂]]></title>
+        <title type="html"><![CDATA[细节]]></title>
         <id>https://yujieroot.github.io/post/za</id>
         <link href="https://yujieroot.github.io/post/za">
         </link>
