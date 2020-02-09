@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-09T08:46:46.010Z</updated>
+    <updated>2020-02-09T08:52:57.497Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://yujieroot.github.io/"/>
+    <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
     <subtitle>root&apos;s blog</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://yujieroot.github.io/images/avatar.png</logo>
+    <icon>https://yujieroot.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
     <entry>
         <title type="html"><![CDATA[穷竭搜索]]></title>
-        <id>http://localhost:4000/post/sou-suo</id>
-        <link href="http://localhost:4000/post/sou-suo">
+        <id>https://yujieroot.github.io/post/sou-suo</id>
+        <link href="https://yujieroot.github.io/post/sou-suo">
         </link>
         <updated>2020-02-03T04:30:34.000Z</updated>
         <content type="html"><![CDATA[<h1 id="核心思想">核心思想</h1>
@@ -148,8 +148,8 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[STL]]></title>
-        <id>http://localhost:4000/post/rong-qi-shi-yong</id>
-        <link href="http://localhost:4000/post/rong-qi-shi-yong">
+        <id>https://yujieroot.github.io/post/rong-qi-shi-yong</id>
+        <link href="https://yujieroot.github.io/post/rong-qi-shi-yong">
         </link>
         <updated>2020-01-31T08:51:05.000Z</updated>
         <content type="html"><![CDATA[<h1 id="万能库">万能库</h1>
@@ -204,8 +204,8 @@ q.push((node){xx,yy,ss});
     </entry>
     <entry>
         <title type="html"><![CDATA[细节]]></title>
-        <id>http://localhost:4000/post/za</id>
-        <link href="http://localhost:4000/post/za">
+        <id>https://yujieroot.github.io/post/za</id>
+        <link href="https://yujieroot.github.io/post/za">
         </link>
         <updated>2020-01-29T07:59:24.000Z</updated>
         <content type="html"><![CDATA[<h2 id="一精度问题">一，精度问题</h2>
@@ -230,8 +230,8 @@ while(scanf()!=-1){}</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[十大经典排序算法]]></title>
-        <id>http://localhost:4000/post/pai-xu</id>
-        <link href="http://localhost:4000/post/pai-xu">
+        <id>https://yujieroot.github.io/post/pai-xu</id>
+        <link href="https://yujieroot.github.io/post/pai-xu">
         </link>
         <updated>2020-01-22T07:31:44.000Z</updated>
         <content type="html"><![CDATA[<p>​    1.冒泡排序</p>
@@ -252,7 +252,7 @@ while(scanf()!=-1){}</p>
 <li>O(n+§)排序，§是介于0和1之间的常数：希尔排序；</li>
 <li>线性阶O(n)排序：基数排序，桶、箱排序；</li>
 </ul>
-<p><img src="http://localhost:4000/post-images/1579770003336.png" alt="" loading="lazy"><img src="D:%5Cimage%5Csort.png" alt="" loading="lazy"></p>
+<p><img src="https://yujieroot.github.io//post-images/1579770003336.png" alt="" loading="lazy"><img src="D:%5Cimage%5Csort.png" alt="" loading="lazy"></p>
 <h2 id="1冒泡排序"><strong>1.冒泡排序</strong></h2>
 <h3 id="11算法描述">1.1算法描述</h3>
 <ul>
@@ -590,8 +590,8 @@ void Sort(vector&lt;int&gt; &amp;a)
     </entry>
     <entry>
         <title type="html"><![CDATA[数组的初始化与定义]]></title>
-        <id>http://localhost:4000/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
-        <link href="http://localhost:4000/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
+        <id>https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
+        <link href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
         </link>
         <updated>2020-01-22T07:27:04.000Z</updated>
         <content type="html"><![CDATA[<h2 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h2>
@@ -619,8 +619,8 @@ void Sort(vector&lt;int&gt; &amp;a)
     </entry>
     <entry>
         <title type="html"><![CDATA[String tips]]></title>
-        <id>http://localhost:4000/post/string-tips</id>
-        <link href="http://localhost:4000/post/string-tips">
+        <id>https://yujieroot.github.io/post/string-tips</id>
+        <link href="https://yujieroot.github.io/post/string-tips">
         </link>
         <updated>2020-01-22T07:13:46.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1字符串逆转"><strong>1.字符串逆转：</strong></h2>
@@ -668,8 +668,8 @@ str.clear();
     </entry>
     <entry>
         <title type="html"><![CDATA[Math tips]]></title>
-        <id>http://localhost:4000/post/math-tips</id>
-        <link href="http://localhost:4000/post/math-tips">
+        <id>https://yujieroot.github.io/post/math-tips</id>
+        <link href="https://yujieroot.github.io/post/math-tips">
         </link>
         <updated>2020-01-22T06:50:17.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1完全平方数的性质">1.完全平方数的性质：</h2>
