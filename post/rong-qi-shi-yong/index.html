@@ -8,7 +8,7 @@
 </title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="https://yujieroot.github.io/">
+<link rel="dns-prefetch" href="http://localhost:4000">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <meta name="author" content="root">
 <meta name="description" content="长在五道口的随姬森林">
@@ -17,8 +17,8 @@
 <!--CDN样式-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
 <!--本地样式-->
-<!--<link rel="stylesheet" href="https://yujieroot.github.io//media/css/style.min.css" />-->
-<link rel="stylesheet" href="https://yujieroot.github.io//styles/main.css" />
+<!--<link rel="stylesheet" href="http://localhost:4000/media/css/style.min.css" />-->
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css" />
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         
@@ -33,9 +33,9 @@
                 <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
                 <!--本地样式-->
-                <!--<script src="https://yujieroot.github.io//media/script/tocbot.min.js"></script>
-        <script src="https://yujieroot.github.io//media/script/script.min.js"></script>
-        <script src="https://yujieroot.github.io//media/script/icon.min.js"></script>-->
+                <!--<script src="http://localhost:4000/media/script/tocbot.min.js"></script>
+        <script src="http://localhost:4000/media/script/script.min.js"></script>
+        <script src="http://localhost:4000/media/script/icon.min.js"></script>-->
                 <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
                 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atelier-estuary-dark.min.css">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
@@ -64,7 +64,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-header header-logo">
-                <a href="https://yujieroot.github.io/">
+                <a href="http://localhost:4000">
                     🎮&amp;🍺4A ブログ
                 </a>
             </div>
@@ -90,7 +90,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1581068662196" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1581237997460" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -101,7 +101,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <div>
-                        <a href="https://yujieroot.github.io/">
+                        <a href="http://localhost:4000">
                             🎮&amp;🍺4A ブログ
                         </a>
                         <!--en-->
@@ -109,7 +109,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1581068662196" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1581237997460" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -182,13 +182,13 @@
                             </a>
                             <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-01-31</a></span>
                             <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">0.6
+                                    href="#">1.3
                                     &#x5206;&#x949F;</a></span>
-                            <span class="post-words">&#x5B57;&#x6570;:<a href="#">129</a></span>
+                            <span class="post-words">&#x5B57;&#x6570;:<a href="#">311</a></span>
                             
                             <span class="post-category">&#x5206;&#x7C7B;:
                                 
-                                <a href="https://yujieroot.github.io/tag/UF7TWtx0D">STL</a>
+                                <a href="http://localhost:4000/tag/UF7TWtx0D">STL</a>
                                 
                             </span>
                             
@@ -199,39 +199,71 @@
                         
                         </header>
                         <div class="post-content">
-                            <h1 id="priority_queue">priority_queue</h1>
-<h3 id="1头文件">1.<strong>头文件</strong></h3>
-<pre><code class="language-c++">#include&lt;queue&gt;
-#include&lt;algorithm&gt;
+                            <h1 id="万能库">万能库</h1>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 </code></pre>
-<h3 id="2-定义"><strong>2、定义</strong></h3>
+<h1 id="vector">vector</h1>
+<h2 id="1-定义">1、定义</h2>
+<pre><code>vector&lt;类型&gt; 标识符
+</code></pre>
+<h2 id="2-方法">2、方法</h2>
+<blockquote>
+<p>1、size：返回容器中元素的数量</p>
+<p>2、push_back：在容器的最后一个元素之后添加一个新元素</p>
+<p>3、pop_back：删除容器中的最后一个元素，有效地将容器 size 减少一个</p>
+<p>4、insert：通过在指定位置的元素<strong>之前</strong>插入新元素来扩展该容器，通过插入元素的数量有效地增加容器大小</p>
+<p>5、erase：从 vector 中删除单个元素（<code>position</code>）或一系列元素（<code>[first，last)</code>），这有效地减少了被去除的元素的数量，从而破坏了容器的大小</p>
+</blockquote>
+<h1 id="priority_queue">priority_queue</h1>
+<h2 id="1-定义-2"><strong>1、定义</strong></h2>
 <blockquote>
 <p>priority_queue&lt;Type, Container, Functional&gt;<br>
 Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>
-</blockquote>
+<blockquote>
 <pre><code class="language-c++">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; a;     
 //大根
 priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
 //小根
 </code></pre>
+</blockquote>
+</blockquote>
 <blockquote>
 <p>如果不写后两个参数，那么容器默认用的是vector，比较方式默认用operator&lt;，也就是优先队列是大顶堆，队头元素最大。</p>
-</blockquote>
-<h2 id="万能库">万能库</h2>
-<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+<blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
 </code></pre>
+</blockquote>
+</blockquote>
+<h1 id="queue">queue</h1>
+<blockquote>
+<p>特殊写法</p>
+<blockquote>
+<pre><code class="language-c++">struct node{
+   int x,y,s;
+};
+queue&lt;node&gt; q;
+int xx,yy,ss;
+q.push((node){xx,yy,ss});
+</code></pre>
+</blockquote>
+</blockquote>
 
             </div>
             <div class="post-toc">
                 <ul class="markdownIt-TOC">
-<li><a href="#priority_queue">priority_queue</a><br>
-*
-<ul>
-<li><a href="#1%E5%A4%B4%E6%96%87%E4%BB%B6">1.<strong>头文件</strong></a></li>
-<li><a href="#2-%E5%AE%9A%E4%B9%89"><strong>2、定义</strong></a></li>
 <li><a href="#%E4%B8%87%E8%83%BD%E5%BA%93">万能库</a></li>
+<li><a href="#vector">vector</a>
+<ul>
+<li><a href="#1-%E5%AE%9A%E4%B9%89">1、定义</a></li>
+<li><a href="#2-%E6%96%B9%E6%B3%95">2、方法</a></li>
 </ul>
 </li>
+<li><a href="#priority_queue">priority_queue</a>
+<ul>
+<li><a href="#1-%E5%AE%9A%E4%B9%89-2"><strong>1、定义</strong></a></li>
+</ul>
+</li>
+<li><a href="#queue">queue</a></li>
 </ul>
 
             </div>
@@ -246,7 +278,7 @@ priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
 
                 <p class="copyright-item">
                     <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                    <span><a href="https://yujieroot.github.io/post/rong-qi-shi-yong">https://yujieroot.github.io/post/rong-qi-shi-yong</a></span>
+                    <span><a href="http://localhost:4000/post/rong-qi-shi-yong">http://localhost:4000/post/rong-qi-shi-yong</a></span>
                 </p>
 
                 <p class="copyright-item">
@@ -264,7 +296,7 @@ priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
                     <span class="tag">
                         
                         
-                        <a href="https://yujieroot.github.io/tag/UF7TWtx0D"># STL</a>
+                        <a href="http://localhost:4000/tag/UF7TWtx0D"># STL</a>
                         
                         
                     </span>
@@ -280,12 +312,12 @@ priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
                                                         <!---->
                                                         <section class="post-nav">
                                                             
-            <a class="prev" rel="prev" href="https://yujieroot.github.io/post/sou-suo">
+            <a class="prev" rel="prev" href="http://localhost:4000/post/sou-suo">
                 穷竭搜索
             </a>
             
             
-            <a class="next" rel="next" href="https://yujieroot.github.io/post/za">
+            <a class="next" rel="next" href="http://localhost:4000/post/za">
                 细节
             </a>
             
@@ -358,7 +390,7 @@ priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1581068662196);
+                    newDate.setTime(1581237997460);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>

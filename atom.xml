@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://yujieroot.github.io/</id>
+    <id>http://localhost:4000</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-07T09:44:36.866Z</updated>
+    <updated>2020-02-09T08:46:46.010Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://yujieroot.github.io/"/>
-    <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>root&apos;s blog</subtitle>
-    <logo>https://yujieroot.github.io/images/avatar.png</logo>
-    <icon>https://yujieroot.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
     <entry>
         <title type="html"><![CDATA[穷竭搜索]]></title>
-        <id>https://yujieroot.github.io/post/sou-suo</id>
-        <link href="https://yujieroot.github.io/post/sou-suo">
+        <id>http://localhost:4000/post/sou-suo</id>
+        <link href="http://localhost:4000/post/sou-suo">
         </link>
         <updated>2020-02-03T04:30:34.000Z</updated>
         <content type="html"><![CDATA[<h1 id="核心思想">核心思想</h1>
@@ -148,37 +148,64 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[STL]]></title>
-        <id>https://yujieroot.github.io/post/rong-qi-shi-yong</id>
-        <link href="https://yujieroot.github.io/post/rong-qi-shi-yong">
+        <id>http://localhost:4000/post/rong-qi-shi-yong</id>
+        <link href="http://localhost:4000/post/rong-qi-shi-yong">
         </link>
         <updated>2020-01-31T08:51:05.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="priority_queue">priority_queue</h1>
-<h3 id="1头文件">1.<strong>头文件</strong></h3>
-<pre><code class="language-c++">#include&lt;queue&gt;
-#include&lt;algorithm&gt;
+        <content type="html"><![CDATA[<h1 id="万能库">万能库</h1>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 </code></pre>
-<h3 id="2-定义"><strong>2、定义</strong></h3>
+<h1 id="vector">vector</h1>
+<h2 id="1-定义">1、定义</h2>
+<pre><code>vector&lt;类型&gt; 标识符
+</code></pre>
+<h2 id="2-方法">2、方法</h2>
+<blockquote>
+<p>1、size：返回容器中元素的数量</p>
+<p>2、push_back：在容器的最后一个元素之后添加一个新元素</p>
+<p>3、pop_back：删除容器中的最后一个元素，有效地将容器 size 减少一个</p>
+<p>4、insert：通过在指定位置的元素<strong>之前</strong>插入新元素来扩展该容器，通过插入元素的数量有效地增加容器大小</p>
+<p>5、erase：从 vector 中删除单个元素（<code>position</code>）或一系列元素（<code>[first，last)</code>），这有效地减少了被去除的元素的数量，从而破坏了容器的大小</p>
+</blockquote>
+<h1 id="priority_queue">priority_queue</h1>
+<h2 id="1-定义-2"><strong>1、定义</strong></h2>
 <blockquote>
 <p>priority_queue&lt;Type, Container, Functional&gt;<br>
 Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>
-</blockquote>
+<blockquote>
 <pre><code class="language-c++">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; a;     
 //大根
 priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; s;
 //小根
 </code></pre>
+</blockquote>
+</blockquote>
 <blockquote>
 <p>如果不写后两个参数，那么容器默认用的是vector，比较方式默认用operator&lt;，也就是优先队列是大顶堆，队头元素最大。</p>
-</blockquote>
-<h2 id="万能库">万能库</h2>
-<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+<blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
 </code></pre>
+</blockquote>
+</blockquote>
+<h1 id="queue">queue</h1>
+<blockquote>
+<p>特殊写法</p>
+<blockquote>
+<pre><code class="language-c++">struct node{
+   int x,y,s;
+};
+queue&lt;node&gt; q;
+int xx,yy,ss;
+q.push((node){xx,yy,ss});
+</code></pre>
+</blockquote>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[细节]]></title>
-        <id>https://yujieroot.github.io/post/za</id>
-        <link href="https://yujieroot.github.io/post/za">
+        <id>http://localhost:4000/post/za</id>
+        <link href="http://localhost:4000/post/za">
         </link>
         <updated>2020-01-29T07:59:24.000Z</updated>
         <content type="html"><![CDATA[<h2 id="一精度问题">一，精度问题</h2>
@@ -203,8 +230,8 @@ while(scanf()!=-1){}</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[十大经典排序算法]]></title>
-        <id>https://yujieroot.github.io/post/pai-xu</id>
-        <link href="https://yujieroot.github.io/post/pai-xu">
+        <id>http://localhost:4000/post/pai-xu</id>
+        <link href="http://localhost:4000/post/pai-xu">
         </link>
         <updated>2020-01-22T07:31:44.000Z</updated>
         <content type="html"><![CDATA[<p>​    1.冒泡排序</p>
@@ -225,7 +252,7 @@ while(scanf()!=-1){}</p>
 <li>O(n+§)排序，§是介于0和1之间的常数：希尔排序；</li>
 <li>线性阶O(n)排序：基数排序，桶、箱排序；</li>
 </ul>
-<p><img src="https://yujieroot.github.io//post-images/1579770003336.png" alt="" loading="lazy"><img src="D:%5Cimage%5Csort.png" alt="" loading="lazy"></p>
+<p><img src="http://localhost:4000/post-images/1579770003336.png" alt="" loading="lazy"><img src="D:%5Cimage%5Csort.png" alt="" loading="lazy"></p>
 <h2 id="1冒泡排序"><strong>1.冒泡排序</strong></h2>
 <h3 id="11算法描述">1.1算法描述</h3>
 <ul>
@@ -563,8 +590,8 @@ void Sort(vector&lt;int&gt; &amp;a)
     </entry>
     <entry>
         <title type="html"><![CDATA[数组的初始化与定义]]></title>
-        <id>https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
-        <link href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
+        <id>http://localhost:4000/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
+        <link href="http://localhost:4000/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
         </link>
         <updated>2020-01-22T07:27:04.000Z</updated>
         <content type="html"><![CDATA[<h2 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h2>
@@ -592,8 +619,8 @@ void Sort(vector&lt;int&gt; &amp;a)
     </entry>
     <entry>
         <title type="html"><![CDATA[String tips]]></title>
-        <id>https://yujieroot.github.io/post/string-tips</id>
-        <link href="https://yujieroot.github.io/post/string-tips">
+        <id>http://localhost:4000/post/string-tips</id>
+        <link href="http://localhost:4000/post/string-tips">
         </link>
         <updated>2020-01-22T07:13:46.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1字符串逆转"><strong>1.字符串逆转：</strong></h2>
@@ -641,8 +668,8 @@ str.clear();
     </entry>
     <entry>
         <title type="html"><![CDATA[Math tips]]></title>
-        <id>https://yujieroot.github.io/post/math-tips</id>
-        <link href="https://yujieroot.github.io/post/math-tips">
+        <id>http://localhost:4000/post/math-tips</id>
+        <link href="http://localhost:4000/post/math-tips">
         </link>
         <updated>2020-01-22T06:50:17.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1完全平方数的性质">1.完全平方数的性质：</h2>
