@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-14T08:59:13.996Z</updated>
+    <updated>2020-02-14T09:02:42.850Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -394,8 +394,8 @@ for(int i=0;i&lt;n;i++)
 <h6 id="1-时间复杂度">1、时间复杂度</h6>
 <p>对一般oj，1s能承受的运算次数大概是1e7~1e8</p>
 <h6 id="2-空间复杂度">2、空间复杂度</h6>
-<p>二维数组的复杂度：O(n^2)</p>
-<p>只要不开好几个10^7以上的数组即可</p>
+<p>二维数组的复杂度：O(n<sup>2</sup>)</p>
+<p>只要不开好几个10<sup>7</sup>以上的数组即可</p>
 </blockquote>
 ]]></content>
     </entry>
