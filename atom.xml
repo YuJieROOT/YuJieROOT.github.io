@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-14T09:02:42.850Z</updated>
+    <updated>2020-02-14T09:09:49.643Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -310,7 +310,7 @@ q.push((node){xx,yy,ss});
         <updated>2020-01-29T07:59:24.000Z</updated>
         <content type="html"><![CDATA[<h1 id="一精度问题">一，精度问题</h1>
 <blockquote>
-<h2 id="当题目中出现需要有高精度的输出时">当题目中出现需要有高精度的输出时：</h2>
+<h3 id="当题目中出现需要有高精度的输出时">当题目中出现需要有高精度的输出时：</h3>
 <p>定义变量：long double<br>
 scanf : %Lf<br>
 pirntf : %.Lf</p>
@@ -321,12 +321,12 @@ pirntf : %.Lf</p>
 </blockquote>
 <h2 id="1-输入">1、输入</h2>
 <blockquote>
-<h6 id="当需要一直输入时">当需要一直输入时：</h6>
+<h3 id="当需要一直输入时">当需要一直输入时：</h3>
 <p>while(scanf()!=-1){}</p>
 <p>while(scanf()!=EOF){}</p>
 </blockquote>
 <blockquote>
-<h6 id="sscanf的使用">sscanf的使用：</h6>
+<h3 id="sscanf的使用">sscanf的使用：</h3>
 <pre><code class="language-c++">char str[100]=&quot;2048:3.14,hello&quot;,str2[100];
 sscanf(str,&quot;%d:%lf,%s&quot;,&amp;n,&amp;db,str2);//将str中的内容写入n，db，str2
 printf(&quot;n=%d db=%.2f str2=%s\n&quot;,n,db,str2);
@@ -337,7 +337,7 @@ printf(&quot;n=%d db=%.2f str2=%s\n&quot;,n,db,str2);
 </blockquote>
 <h2 id="2-输出">2、输出</h2>
 <blockquote>
-<h6 id="sprintf的使用">sprintf的使用：</h6>
+<h3 id="sprintf的使用">sprintf的使用：</h3>
 <pre><code class="language-c++">int n=12;
 double db=3.1415;
 char str[100],str2[100]=&quot;good&quot;;
@@ -349,7 +349,7 @@ printf(&quot;str=%s&quot;,str);
 </code></pre>
 </blockquote>
 <blockquote>
-<h6 id="输出的空格与换行">输出的空格与换行：</h6>
+<h3 id="输出的空格与换行">输出的空格与换行：</h3>
 <pre><code class="language-c++">//末尾无换行
 while(t--)
 {
@@ -372,28 +372,28 @@ for(int i=0;i&lt;n;i++)
 </blockquote>
 <h1 id="四-浮点数的比较">四、浮点数的比较</h1>
 <blockquote>
-<h6 id="1-运算符">1、== 运算符</h6>
+<h3 id="1-运算符">1、== 运算符</h3>
 <p>由于浮点数存储不精确，我们引入一个极小数eps来修正误差，经验表明eps取1e-8比较合适</p>
 <pre><code class="language-c++">const double eps = 1e-8;
 #define Equ(a,b) ((fabs((a)-(b))))&lt;(eps))
 </code></pre>
-<h6 id="2-运算符">2、&gt; ，&lt; 运算符</h6>
+<h3 id="2-运算符">2、&gt; ，&lt; 运算符</h3>
 <pre><code class="language-c++">#define More(a,b) (((a)-(b))&gt;(eps))
 #define Less(a,b) (((a)-(b))&lt;(-eps))
 </code></pre>
-<h6 id="3-运算符">3、&gt;= ,&lt;= 运算符</h6>
+<h3 id="3-运算符">3、&gt;= ,&lt;= 运算符</h3>
 <pre><code>#define MoreEqu(a,b) (((a)-(b))&gt;(-eps))
 #define LessEqu(a,b) (((a)-(b))&lt;(eps))
 </code></pre>
-<h6 id="4-圆周率">4、圆周率</h6>
+<h3 id="4-圆周率">4、圆周率</h3>
 <pre><code class="language-c++">const double Pi = acos(-1.0);
 </code></pre>
 </blockquote>
 <h1 id="五-复杂度">五、复杂度</h1>
 <blockquote>
-<h6 id="1-时间复杂度">1、时间复杂度</h6>
+<h3 id="1-时间复杂度">1、时间复杂度</h3>
 <p>对一般oj，1s能承受的运算次数大概是1e7~1e8</p>
-<h6 id="2-空间复杂度">2、空间复杂度</h6>
+<h3 id="2-空间复杂度">2、空间复杂度</h3>
 <p>二维数组的复杂度：O(n<sup>2</sup>)</p>
 <p>只要不开好几个10<sup>7</sup>以上的数组即可</p>
 </blockquote>
