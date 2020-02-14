@@ -90,7 +90,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1581238374143" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1581670409471" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -109,7 +109,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1581238374143" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1581670409471" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -182,9 +182,9 @@
                             </a>
                             <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-01-29</a></span>
                             <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">0.3
+                                    href="#">2.1
                                     &#x5206;&#x949F;</a></span>
-                            <span class="post-words">&#x5B57;&#x6570;:<a href="#">77</a></span>
+                            <span class="post-words">&#x5B57;&#x6570;:<a href="#">434</a></span>
                             
                             <span class="post-category">&#x5206;&#x7C7B;:
                                 
@@ -199,36 +199,137 @@
                         
                         </header>
                         <div class="post-content">
-                            <h2 id="一精度问题">一，精度问题</h2>
+                            <h1 id="一精度问题">一，精度问题</h1>
 <blockquote>
-<p>当题目中出现需要有高精度的输出时：<br>
-定义变量：long double<br>
+<h2 id="当题目中出现需要有高精度的输出时">当题目中出现需要有高精度的输出时：</h2>
+<p>定义变量：long double<br>
 scanf : %Lf<br>
 pirntf : %.Lf</p>
 </blockquote>
-<h2 id="二输入问题">二，输入问题</h2>
+<h1 id="二输入与输出问题">二，输入与输出问题</h1>
 <blockquote>
-<p>当需要一直输入时：<br>
-while(scanf()!=-1){}</p>
+<p>除非特定情况 尽量用scanf与printf （cin，cout 容易超时😭）</p>
 </blockquote>
-<h2 id="三输出问题">三，输出问题</h2>
-<h2 id="四定义变量问题">四，定义变量问题</h2>
+<h2 id="1-输入">1、输入</h2>
 <blockquote>
-<p>不加 long long 见祖宗<br>
-数组定义在main外可以开大</p>
+<h6 id="当需要一直输入时">当需要一直输入时：</h6>
+<p>while(scanf()!=-1){}</p>
+<p>while(scanf()!=EOF){}</p>
+</blockquote>
+<blockquote>
+<h6 id="sscanf的使用">sscanf的使用：</h6>
+<pre><code class="language-c++">char str[100]=&quot;2048:3.14,hello&quot;,str2[100];
+sscanf(str,&quot;%d:%lf,%s&quot;,&amp;n,&amp;db,str2);//将str中的内容写入n，db，str2
+printf(&quot;n=%d db=%.2f str2=%s\n&quot;,n,db,str2);
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-c++">n=2048 db=3.14 str2=hello
+</code></pre>
+</blockquote>
+<h2 id="2-输出">2、输出</h2>
+<blockquote>
+<h6 id="sprintf的使用">sprintf的使用：</h6>
+<pre><code class="language-c++">int n=12;
+double db=3.1415;
+char str[100],str2[100]=&quot;good&quot;;
+sprintf(str,&quot;%d:%.2f,%s&quot;,n,db,str2);//将n，db，str2写入str
+printf(&quot;str=%s&quot;,str);
+</code></pre>
+<p>输出结果：</p>
+<pre><code>str=12:3.14,good
+</code></pre>
+</blockquote>
+<blockquote>
+<h6 id="输出的空格与换行">输出的空格与换行：</h6>
+<pre><code class="language-c++">//末尾无换行
+while(t--)
+{
+ cout&lt;&lt;a[t];
+ if(t&gt;0) cout&lt;&lt;' ';
+}
+</code></pre>
+<pre><code class="language-c++">//末尾无空格
+for(int i=0;i&lt;n;i++)
+{
+ cout&lt;&lt;a[i];
+ if(i&lt;n-1) cout&lt;&lt;' ';
+ else cout&lt;&lt;endl;
+}
+</code></pre>
+</blockquote>
+<h1 id="三定义变量问题">三，定义变量问题</h1>
+<blockquote>
+<p>不加 long long 见祖宗</p>
+</blockquote>
+<h1 id="四-浮点数的比较">四、浮点数的比较</h1>
+<blockquote>
+<h6 id="1-运算符">1、== 运算符</h6>
+<p>由于浮点数存储不精确，我们引入一个极小数eps来修正误差，经验表明eps取1e-8比较合适</p>
+<pre><code class="language-c++">const double eps = 1e-8;
+#define Equ(a,b) ((fabs((a)-(b))))&lt;(eps))
+</code></pre>
+<h6 id="2-运算符">2、&gt; ，&lt; 运算符</h6>
+<pre><code class="language-c++">#define More(a,b) (((a)-(b))&gt;(eps))
+#define Less(a,b) (((a)-(b))&lt;(-eps))
+</code></pre>
+<h6 id="3-运算符">3、&gt;= ,&lt;= 运算符</h6>
+<pre><code>#define MoreEqu(a,b) (((a)-(b))&gt;(-eps))
+#define LessEqu(a,b) (((a)-(b))&lt;(eps))
+</code></pre>
+<h6 id="4-圆周率">4、圆周率</h6>
+<pre><code class="language-c++">const double Pi = acos(-1.0);
+</code></pre>
+</blockquote>
+<h1 id="五-复杂度">五、复杂度</h1>
+<blockquote>
+<h6 id="1-时间复杂度">1、时间复杂度</h6>
+<p>对一般oj，1s能承受的运算次数大概是1e7~1e8</p>
+<h6 id="2-空间复杂度">2、空间复杂度</h6>
+<p>二维数组的复杂度：O(n^2)</p>
+<p>只要不开好几个10^7以上的数组即可</p>
 </blockquote>
 
             </div>
             <div class="post-toc">
                 <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E4%B8%80%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98">一，精度问题</a>
 <ul>
-<li><a href="#%E4%B8%80%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98">一，精度问题</a></li>
-<li><a href="#%E4%BA%8C%E8%BE%93%E5%85%A5%E9%97%AE%E9%A2%98">二，输入问题</a></li>
-<li><a href="#%E4%B8%89%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98">三，输出问题</a></li>
-<li><a href="#%E5%9B%9B%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98">四，定义变量问题</a></li>
+<li><a href="#%E5%BD%93%E9%A2%98%E7%9B%AE%E4%B8%AD%E5%87%BA%E7%8E%B0%E9%9C%80%E8%A6%81%E6%9C%89%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%9A%84%E8%BE%93%E5%87%BA%E6%97%B6">当题目中出现需要有高精度的输出时：</a></li>
 </ul>
 </li>
+<li><a href="#%E4%BA%8C%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98">二，输入与输出问题</a>
+<ul>
+<li><a href="#1-%E8%BE%93%E5%85%A5">1、输入</a><br>
+*<br>
+*<br>
+*<br>
+* <a href="#%E5%BD%93%E9%9C%80%E8%A6%81%E4%B8%80%E7%9B%B4%E8%BE%93%E5%85%A5%E6%97%B6">当需要一直输入时：</a><br>
+* <a href="#sscanf%E7%9A%84%E4%BD%BF%E7%94%A8">sscanf的使用：</a></li>
+<li><a href="#2-%E8%BE%93%E5%87%BA">2、输出</a><br>
+*<br>
+*<br>
+*<br>
+* <a href="#sprintf%E7%9A%84%E4%BD%BF%E7%94%A8">sprintf的使用：</a><br>
+* <a href="#%E8%BE%93%E5%87%BA%E7%9A%84%E7%A9%BA%E6%A0%BC%E4%B8%8E%E6%8D%A2%E8%A1%8C">输出的空格与换行：</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98">三，定义变量问题</a></li>
+<li><a href="#%E5%9B%9B-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%AF%94%E8%BE%83">四、浮点数的比较</a><br>
+*<br>
+*<br>
+*<br>
+*<br>
+* <a href="#1-%E8%BF%90%E7%AE%97%E7%AC%A6">1、== 运算符</a><br>
+* <a href="#2-%E8%BF%90%E7%AE%97%E7%AC%A6">2、&gt; ，&lt; 运算符</a><br>
+* <a href="#3-%E8%BF%90%E7%AE%97%E7%AC%A6">3、&gt;= ,&lt;= 运算符</a><br>
+* <a href="#4-%E5%9C%86%E5%91%A8%E7%8E%87">4、圆周率</a></li>
+<li><a href="#%E4%BA%94-%E5%A4%8D%E6%9D%82%E5%BA%A6">五、复杂度</a><br>
+*<br>
+*<br>
+*<br>
+*<br>
+* <a href="#1-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">1、时间复杂度</a><br>
+* <a href="#2-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">2、空间复杂度</a></li>
 </ul>
 
             </div>
@@ -355,7 +456,7 @@ while(scanf()!=-1){}</p>
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1581238374143);
+                    newDate.setTime(1581670409471);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>

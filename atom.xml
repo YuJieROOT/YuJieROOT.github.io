@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-09T08:52:57.497Z</updated>
+    <updated>2020-02-14T08:53:35.471Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -36,7 +36,7 @@
 <p><strong>一共有几条路径</strong></p>
 </blockquote>
 <h2 id="例">例：</h2>
-<h3 id="1八皇后">1.八皇后</h3>
+<h2 id="1八皇后">1.八皇后</h2>
 <pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 
@@ -88,7 +88,7 @@ int main()
 	cout&lt;&lt;cnt;
 }
 </code></pre>
-<h3 id="2迷宫">2.迷宫</h3>
+<h2 id="2迷宫">2.迷宫</h2>
 <h4 id="题目背景">题目背景</h4>
 <blockquote>
 <p>给定一个N*M方格的迷宫，迷宫里有T处障碍，障碍处不可通过。给定起点坐标和终点坐标，问: 每个方格最多经过1次，有多少种从起点坐标到终点坐标的方案。在迷宫中移动有上下左右四种方式，每次只能移动一个方格。数据保证起点上没有障碍。</p>
@@ -140,10 +140,110 @@ int main()
 	cout&lt;&lt;cnt;
 }
 </code></pre>
+<h2 id="3-shoi2002滑雪记忆化搜索">3、[SHOI2002]滑雪（记忆化搜索）</h2>
+<blockquote>
+<h3 id="题目描述">题目描述</h3>
+<p>Michael 喜欢滑雪。这并不奇怪，因为滑雪的确很刺激。可是为了获得速度，滑的区域必须向下倾斜，而且当你滑到坡底，你不得不再次走上坡或者等待升降机来载你。Michael 想知道在一个区域中最长的滑坡。区域由一个二维数组给出。数组的每个数字代表点的高度。下面是一个例子：</p>
+<blockquote>
+<pre><code>1   2   3   4   5
+16  17  18  19  6
+15  24  25  20  7
+14  23  22  21  8
+13  12  11  10  9
+</code></pre>
+</blockquote>
+<p>一个人可以从某个点滑向上下左右相邻四个点之一，当且仅当高度会减小。在上面的例子中，一条可行的滑坡为 24－17－16－1（从 24 开始，在 1 结束）。当然 25－24－23 - … - 3－2－1 更长。事实上，这是最长的一条。</p>
+</blockquote>
+<h4 id="代码-2">代码</h4>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+int dx[4]={0,0,1,-1};
+int dy[4]={1,-1,0,0};
+
+int n,m,a[201][201],s[201][201],ans;
+
+int dfs(int x,int y){
+    if(s[x][y])return s[x][y];//记忆化搜索
+    s[x][y]=1;//题目中答案是有包含这个点的
+    for(int i=0;i&lt;4;i++)
+    {  int xx=dx[i]+x;
+       int yy=dy[i]+y;
+       if(xx&gt;0&amp;&amp;yy&gt;0&amp;&amp;xx&lt;=n&amp;&amp;yy&lt;=m&amp;&amp;a[x][y]&gt;a[xx][yy]){
+          dfs(xx,yy);
+          s[x][y]=max(s[x][y],s[xx][yy]+1);
+       }
+    }
+    return s[x][y];
+}
+
+int main()
+{   
+   scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+   for(int i=1;i&lt;=n;i++)
+     for(int j=1;j&lt;=m;j++)
+       scanf(&quot;%d&quot;,&amp;a[i][j]);
+    for(int i=1;i&lt;=n;i++)//找从每个出发的最长距离
+      for(int j=1;j&lt;=m;j++)
+        ans=max(ans,dfs(i,j));//取最大值
+    printf(&quot;%d&quot;,ans);
+    return 0;
+}
+</code></pre>
 <h1 id="bfs">BFS</h1>
 <blockquote>
-<p><strong>一个点到另一个点需要走几步</strong></p>
+<p><strong>广搜常用于找单一的最短路线，或者是规模小的路径搜索，它的特点是&quot;搜到就是最优解&quot;</strong></p>
 </blockquote>
+<h2 id="例-2">例：</h2>
+<h3 id="1-马的遍历">1、马的遍历</h3>
+<blockquote>
+<p>有一个n*m的棋盘(1&lt;n,m&lt;=400)，在某个点上有一个马,要求你计算出马到达棋盘上任意一个点最少要走几步</p>
+</blockquote>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n,m,sx,sy,ans;
+int xx[]={1,1,-1,-1,2,2,-2,-2};
+int yy[]={2,-2,2,-2,1,-1,1,-1};
+struct node{
+	int x;
+	int y;
+	int s;
+};
+queue&lt; node &gt; q;
+int mp[405][405];
+
+int main()
+{
+	memset(mp,-1,sizeof(mp));
+	cin&gt;&gt;n&gt;&gt;m&gt;&gt;sx&gt;&gt;sy;
+	mp[sx][sy]=0;
+	q.push((node) {sx,sy,0});
+	while(!q.empty())
+	{
+		for(int i=0;i&lt;8;i++)
+		{
+			int dx=q.front().x+xx[i];
+			int dy=q.front().y+yy[i];
+			if(dx&gt;=1&amp;&amp;dx&lt;=n&amp;&amp;dy&gt;=1&amp;&amp;dy&lt;=m&amp;&amp;mp[dx][dy]==-1)
+			{
+				mp[dx][dy]=q.front().s+1;
+				q.push((node){dx,dy,q.front().s+1});
+			}
+		}
+		q.pop();
+	}
+	for(int i=1;i&lt;=n;i++)
+	{
+		for(int j=1;j&lt;=m;j++)
+		{
+			cout&lt;&lt;left&lt;&lt;setw(5)&lt;&lt;mp[i][j];
+		}
+		cout&lt;&lt;endl;
+	}
+	
+}
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -208,23 +308,94 @@ q.push((node){xx,yy,ss});
         <link href="https://yujieroot.github.io/post/za">
         </link>
         <updated>2020-01-29T07:59:24.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="一精度问题">一，精度问题</h2>
+        <content type="html"><![CDATA[<h1 id="一精度问题">一，精度问题</h1>
 <blockquote>
-<p>当题目中出现需要有高精度的输出时：<br>
-定义变量：long double<br>
+<h2 id="当题目中出现需要有高精度的输出时">当题目中出现需要有高精度的输出时：</h2>
+<p>定义变量：long double<br>
 scanf : %Lf<br>
 pirntf : %.Lf</p>
 </blockquote>
-<h2 id="二输入问题">二，输入问题</h2>
+<h1 id="二输入与输出问题">二，输入与输出问题</h1>
 <blockquote>
-<p>当需要一直输入时：<br>
-while(scanf()!=-1){}</p>
+<p>除非特定情况 尽量用scanf与printf （cin，cout 容易超时😭）</p>
 </blockquote>
-<h2 id="三输出问题">三，输出问题</h2>
-<h2 id="四定义变量问题">四，定义变量问题</h2>
+<h2 id="1-输入">1、输入</h2>
 <blockquote>
-<p>不加 long long 见祖宗<br>
-数组定义在main外可以开大</p>
+<h6 id="当需要一直输入时">当需要一直输入时：</h6>
+<p>while(scanf()!=-1){}</p>
+<p>while(scanf()!=EOF){}</p>
+</blockquote>
+<blockquote>
+<h6 id="sscanf的使用">sscanf的使用：</h6>
+<pre><code class="language-c++">char str[100]=&quot;2048:3.14,hello&quot;,str2[100];
+sscanf(str,&quot;%d:%lf,%s&quot;,&amp;n,&amp;db,str2);//将str中的内容写入n，db，str2
+printf(&quot;n=%d db=%.2f str2=%s\n&quot;,n,db,str2);
+</code></pre>
+<p>输出结果：</p>
+<pre><code class="language-c++">n=2048 db=3.14 str2=hello
+</code></pre>
+</blockquote>
+<h2 id="2-输出">2、输出</h2>
+<blockquote>
+<h6 id="sprintf的使用">sprintf的使用：</h6>
+<pre><code class="language-c++">int n=12;
+double db=3.1415;
+char str[100],str2[100]=&quot;good&quot;;
+sprintf(str,&quot;%d:%.2f,%s&quot;,n,db,str2);//将n，db，str2写入str
+printf(&quot;str=%s&quot;,str);
+</code></pre>
+<p>输出结果：</p>
+<pre><code>str=12:3.14,good
+</code></pre>
+</blockquote>
+<blockquote>
+<h6 id="输出的空格与换行">输出的空格与换行：</h6>
+<pre><code class="language-c++">//末尾无换行
+while(t--)
+{
+ cout&lt;&lt;a[t];
+ if(t&gt;0) cout&lt;&lt;' ';
+}
+</code></pre>
+<pre><code class="language-c++">//末尾无空格
+for(int i=0;i&lt;n;i++)
+{
+ cout&lt;&lt;a[i];
+ if(i&lt;n-1) cout&lt;&lt;' ';
+ else cout&lt;&lt;endl;
+}
+</code></pre>
+</blockquote>
+<h1 id="三定义变量问题">三，定义变量问题</h1>
+<blockquote>
+<p>不加 long long 见祖宗</p>
+</blockquote>
+<h1 id="四-浮点数的比较">四、浮点数的比较</h1>
+<blockquote>
+<h6 id="1-运算符">1、== 运算符</h6>
+<p>由于浮点数存储不精确，我们引入一个极小数eps来修正误差，经验表明eps取1e-8比较合适</p>
+<pre><code class="language-c++">const double eps = 1e-8;
+#define Equ(a,b) ((fabs((a)-(b))))&lt;(eps))
+</code></pre>
+<h6 id="2-运算符">2、&gt; ，&lt; 运算符</h6>
+<pre><code class="language-c++">#define More(a,b) (((a)-(b))&gt;(eps))
+#define Less(a,b) (((a)-(b))&lt;(-eps))
+</code></pre>
+<h6 id="3-运算符">3、&gt;= ,&lt;= 运算符</h6>
+<pre><code>#define MoreEqu(a,b) (((a)-(b))&gt;(-eps))
+#define LessEqu(a,b) (((a)-(b))&lt;(eps))
+</code></pre>
+<h6 id="4-圆周率">4、圆周率</h6>
+<pre><code class="language-c++">const double Pi = acos(-1.0);
+</code></pre>
+</blockquote>
+<h1 id="五-复杂度">五、复杂度</h1>
+<blockquote>
+<h6 id="1-时间复杂度">1、时间复杂度</h6>
+<p>对一般oj，1s能承受的运算次数大概是1e7~1e8</p>
+<h6 id="2-空间复杂度">2、空间复杂度</h6>
+<p>二维数组的复杂度：O(n^2)</p>
+<p>只要不开好几个10^7以上的数组即可</p>
 </blockquote>
 ]]></content>
     </entry>
@@ -589,32 +760,31 @@ void Sort(vector&lt;int&gt; &amp;a)
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[数组的初始化与定义]]></title>
+        <title type="html"><![CDATA[数组]]></title>
         <id>https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
         <link href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
         </link>
         <updated>2020-01-22T07:27:04.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h2>
+        <content type="html"><![CDATA[<h1 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h1>
 <ol>
-<li>
-<p>​    <strong>直接初始化为0 or false</strong></p>
-</li>
-<li>
-<p>​    <strong>数组更大</strong></p>
-</li>
+<li><strong>直接初始化为0 or false</strong></li>
+<li><strong>数组更大</strong></li>
 </ol>
 <h2 id="1数组大小"><strong>1.数组大小</strong></h2>
 <ul>
 <li>全局数组能开到20000<em>20000</em></li>
 <li><em>函数中的char数组最大能开4</em>518028</li>
 <li>int最大能开到518028</li>
-<li>static能开到10<sup>7*10</sup>7//static和 全局开的是同一块空间</li>
+<li>static能开到107*107//static和 全局开的是同一块空间</li>
 </ul>
-<h2 id="2在main中赋值"><strong>2.在main中赋值：</strong></h2>
-<ul>
-<li>头文件：#include<cstring></li>
-<li>初始化形式：memset(s(初始化数组名)，0(要替换的数字)sizeof(s))//多维数组同样  <strong>发现有时候赋值数组为0并不能得到满意的结果，但尝试用memset函数后结果正确</strong></li>
-</ul>
+<h2 id="2赋值"><strong>2.赋值：</strong></h2>
+<blockquote>
+<p>对数组中的每一个元素赋相同的值：</p>
+<pre><code class="language-c++">memset(数组名，值，sizeof(数组名))；
+</code></pre>
+<p><strong>只用来赋值 0或-1</strong></p>
+<p>若要赋其他的值，用fill函数（memset更快）</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
@@ -623,45 +793,37 @@ void Sort(vector&lt;int&gt; &amp;a)
         <link href="https://yujieroot.github.io/post/string-tips">
         </link>
         <updated>2020-01-22T07:13:46.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1字符串逆转"><strong>1.字符串逆转：</strong></h2>
-<p>头文件：</p>
-<pre><code class="language-c++"> #include&lt;algorithm&gt;
-</code></pre>
+        <content type="html"><![CDATA[<h1 id="1字符串逆转">1.字符串逆转：</h1>
 <pre><code class="language-c++">示例：string:reverse(s.begin(),s.end())  
      array:reverse(a,a+len)
 </code></pre>
-<h2 id="2string类型的读入"><strong>2.string类型的读入:</strong></h2>
+<h1 id="2-string类型的读入">2. string类型的读入:</h1>
 <pre><code class="language-c++"> cin&gt;&gt;s;//不能读入空格，以空格、制表符、回车符作为结束标志
  getline(cin,s);//可以读入空格和制表符，以回车符作为结束标志
 </code></pre>
-<h2 id="3查找t是否为s的子串"><strong>3.查找t是否为s的子串:</strong></h2>
+<h1 id="3查找t是否为s的子串">3.查找t是否为s的子串:</h1>
 <pre><code>s.find(t);//如果t是s的子串则返回首次匹配的位置，否则返回 string::npos 或 -1
 </code></pre>
-<h2 id="4对string类型数组排序"><strong>4.对string类型数组排序</strong></h2>
-<pre><code class="language-c++">string s[100];
-sort(s,s+n,cmp);
-int cmp(string a,string b)
-{
-    return a&lt;b; //或a&gt;b;
-}
+<h1 id="4比较两个字符串">4.比较两个字符串</h1>
+<pre><code class="language-c++">strcmp(s1,s2)//按字典序，if(s1&lt;s2 return &lt;0)，if(s1==s2 return 0),if(s1&gt;s2 return &gt;0)
 </code></pre>
-<h2 id="5字符串提取"><strong>5.字符串提取</strong></h2>
+<h1 id="5字符串提取">5.字符串提取</h1>
 <pre><code class="language-c++">string a=s.substr(0,4);
 </code></pre>
-<h2 id="6-插入字符串"><strong>6. 插入字符串</strong></h2>
+<h1 id="6-插入字符串">6. 插入字符串</h1>
 <pre><code class="language-c++">str1.insert(pos1,str2);
 str1.insert(pos1,str2,pos2,len2);
 str1.insert(pos1,numchar,char); //numchar是插入次数，char是要插入的字符。
 </code></pre>
-<h2 id="7-替换字符串"><strong>7. 替换字符串</strong></h2>
+<h1 id="7-替换字符串">7. 替换字符串</h1>
 <pre><code class="language-c++">str1.replace(pos1,str2);
 str1.replace(pos1,str2,pos2,len2);
 </code></pre>
-<h2 id="8-删除字符串"><strong>8. 删除字符串</strong></h2>
+<h1 id="8-删除字符串">8. 删除字符串</h1>
 <pre><code class="language-c++">str.erase(pos,len)
 str.clear();
 </code></pre>
-<h2 id="9-交换字符串"><strong>9. 交换字符串</strong></h2>
+<h1 id="9-交换字符串">9. 交换字符串</h1>
 <pre><code class="language-c++">swap(str1,str2);
 </code></pre>
 ]]></content>
@@ -672,10 +834,53 @@ str.clear();
         <link href="https://yujieroot.github.io/post/math-tips">
         </link>
         <updated>2020-01-22T06:50:17.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1完全平方数的性质">1.完全平方数的性质：</h2>
-<pre><code>一个非完全平方数，因数个数肯定为偶数 例：8:（1,2,4,8）
-一个完全平方数，因数个数肯定为奇数 例：9:（1,3,9）
+        <content type="html"><![CDATA[<h1 id="常用的math函数">常用的math函数</h1>
+<blockquote>
+<p>1.fabs（double x） abs(int x)</p>
+<p>2.floor(double x)      ceil(double x) //向下取整（取小）    向上取整（取大）</p>
+<p>3.pow(double r,double p)</p>
+<p>4.round(double x) //将x变量四舍五入  返回类型也是double</p>
+</blockquote>
+<h1 id="完全平方数的性质">完全平方数的性质：</h1>
+<blockquote>
+<p>一个非完全平方数，因数个数肯定为偶数 例：8:（1,2,4,8）<br>
+一个完全平方数，因数个数肯定为奇数 例：9:（1,3,9）</p>
+</blockquote>
+<h1 id="余数的规律">余数的规律</h1>
+<blockquote>
+<h2 id="例">例：</h2>
+<blockquote>
+<p>b=2,p=10 k=9</p>
+<p>2^1=2 2%9=2</p>
+<p>2^2=4 4%9=4</p>
+<p>2^3=8 8%9=8</p>
+<p>2^4=16 16%9=7</p>
+<p>2^5=32 32%9=5</p>
+<p>2^6=64 64%9=1</p>
+<p>2^7=128 128%9=2</p>
+</blockquote>
+<p>我们会发现，余数到2<sup>7的时候就已经跟2</sup>1重复了 每一个数都是一样的</p>
+</blockquote>
+<h2 id="代码">代码</h2>
+<pre><code class="language-c++">long long a,b,c;
+long s=a%c;
+long t=1;
+for(int i=2;i&lt;=b;i++)
+{
+	s=s*a%c;
+    if(s==a%c) break;
+    t++;
+}
+b%=t;
+if(b==0) b=t;
+s=1;
+for(int i=1;i&lt;=b;i++)
+{
+    s=s*a%c;
+}
+//s即为a的b次方除c的余数
 </code></pre>
+<h1 id=""></h1>
 ]]></content>
     </entry>
 </feed>
