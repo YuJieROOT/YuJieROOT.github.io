@@ -177,7 +177,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                细节
+                                donate
                             </h1>
                             
                                 <!--en-->
@@ -187,20 +187,13 @@
                                         🎮&🍺4A ブログ
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2020-01-29</a>
+                                Date: <a href="#">2020-02-20</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">2.1
+                                    href="#">0.0
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">432</a></span>
+                                    <span class="post-words">words:<a href="#">0</a></span>
                                     
-                                        <span class="post-category">
-                                Category:
-                                
-                                <a href="https://yujieroot.github.io/tag/ANtm_x7bL/">tips</a>
-                                
-                            </span>
-                                        
                                             Views:
                                             <span data-hk-page="current"> - </span>
                                             
@@ -208,141 +201,12 @@
                                 
                         </header>
                         <div class="post-content">
-                            <h1 id="一精度问题">一，精度问题</h1>
-<blockquote>
-<h3 id="当题目中出现需要有高精度的输出时">当题目中出现需要有高精度的输出时：</h3>
-<p>定义变量：long double<br>
-scanf : %Lf<br>
-pirntf : %.Lf</p>
-</blockquote>
-<h1 id="二输入与输出问题">二，输入与输出问题</h1>
-<blockquote>
-<p>除非特定情况 尽量用scanf与printf （cin，cout 容易超时😭）</p>
-</blockquote>
-<h2 id="1-输入">1、输入</h2>
-<blockquote>
-<h3 id="当需要一直输入时">当需要一直输入时：</h3>
-<p>while(scanf()!=-1){}</p>
-<p>while(scanf()!=EOF){}</p>
-</blockquote>
-<blockquote>
-<h3 id="sscanf的使用">sscanf的使用：</h3>
-<pre><code class="language-c++">char str[100]=&quot;2048:3.14,hello&quot;,str2[100];
-sscanf(str,&quot;%d:%lf,%s&quot;,&amp;n,&amp;db,str2);//将str中的内容写入n，db，str2
-printf(&quot;n=%d db=%.2f str2=%s\n&quot;,n,db,str2);
-</code></pre>
-<p>输出结果：</p>
-<pre><code class="language-c++">n=2048 db=3.14 str2=hello
-</code></pre>
-</blockquote>
-<h2 id="2-输出">2、输出</h2>
-<blockquote>
-<h3 id="sprintf的使用">sprintf的使用：</h3>
-<pre><code class="language-c++">int n=12;
-double db=3.1415;
-char str[100],str2[100]=&quot;good&quot;;
-sprintf(str,&quot;%d:%.2f,%s&quot;,n,db,str2);//将n，db，str2写入str
-printf(&quot;str=%s&quot;,str);
-</code></pre>
-<p>输出结果：</p>
-<pre><code>str=12:3.14,good
-</code></pre>
-</blockquote>
-<blockquote>
-<h3 id="输出的空格与换行">输出的空格与换行：</h3>
-<pre><code class="language-c++">//末尾无换行
-while(t--)
-{
- cout&lt;&lt;a[t];
- if(t&gt;0) cout&lt;&lt;' ';
-}
-</code></pre>
-<pre><code class="language-c++">//末尾无空格
-for(int i=0;i&lt;n;i++)
-{
- cout&lt;&lt;a[i];
- if(i&lt;n-1) cout&lt;&lt;' ';
- else cout&lt;&lt;endl;
-}
-</code></pre>
-</blockquote>
-<h1 id="三定义变量问题">三，定义变量问题</h1>
-<blockquote>
-<p>不加 long long 见祖宗</p>
-</blockquote>
-<h1 id="四-浮点数的比较">四、浮点数的比较</h1>
-<blockquote>
-<h3 id="1-运算符">1、== 运算符</h3>
-<p>由于浮点数存储不精确，我们引入一个极小数eps来修正误差，经验表明eps取1e-8比较合适</p>
-<pre><code class="language-c++">const double eps = 1e-8;
-#define Equ(a,b) ((fabs((a)-(b))))&lt;(eps))
-</code></pre>
-<h3 id="2-运算符">2、&gt; ，&lt; 运算符</h3>
-<pre><code class="language-c++">#define More(a,b) (((a)-(b))&gt;(eps))
-#define Less(a,b) (((a)-(b))&lt;(-eps))
-</code></pre>
-<h3 id="3-运算符">3、&gt;= ,&lt;= 运算符</h3>
-<pre><code>#define MoreEqu(a,b) (((a)-(b))&gt;(-eps))
-#define LessEqu(a,b) (((a)-(b))&lt;(eps))
-</code></pre>
-<h3 id="4-圆周率">4、圆周率</h3>
-<pre><code class="language-c++">const double Pi = acos(-1.0);
-</code></pre>
-</blockquote>
-<h1 id="五-复杂度">五、复杂度</h1>
-<blockquote>
-<h3 id="1-时间复杂度">1、时间复杂度</h3>
-<p>对一般oj，1s能承受的运算次数大概是1e7~1e8</p>
-<h3 id="2-空间复杂度">2、空间复杂度</h3>
-<p>二维数组的复杂度：O(n<sup>2</sup>)</p>
-<p>只要不开好几个10<sup>7</sup>以上的数组即可</p>
-</blockquote>
+                            <figure data-type="image" tabindex="1"><img src="https://yujieroot.github.io//post-images/1582178393228.jpg" alt="" loading="lazy"></figure>
 
                         </div>
                         
                             <div class="post-toc">
-                                <ul class="markdownIt-TOC">
-<li><a href="#%E4%B8%80%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98">一，精度问题</a><br>
-*
-<ul>
-<li><a href="#%E5%BD%93%E9%A2%98%E7%9B%AE%E4%B8%AD%E5%87%BA%E7%8E%B0%E9%9C%80%E8%A6%81%E6%9C%89%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%9A%84%E8%BE%93%E5%87%BA%E6%97%B6">当题目中出现需要有高精度的输出时：</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BA%8C%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98">二，输入与输出问题</a>
-<ul>
-<li><a href="#1-%E8%BE%93%E5%85%A5">1、输入</a>
-<ul>
-<li><a href="#%E5%BD%93%E9%9C%80%E8%A6%81%E4%B8%80%E7%9B%B4%E8%BE%93%E5%85%A5%E6%97%B6">当需要一直输入时：</a></li>
-<li><a href="#sscanf%E7%9A%84%E4%BD%BF%E7%94%A8">sscanf的使用：</a></li>
-</ul>
-</li>
-<li><a href="#2-%E8%BE%93%E5%87%BA">2、输出</a>
-<ul>
-<li><a href="#sprintf%E7%9A%84%E4%BD%BF%E7%94%A8">sprintf的使用：</a></li>
-<li><a href="#%E8%BE%93%E5%87%BA%E7%9A%84%E7%A9%BA%E6%A0%BC%E4%B8%8E%E6%8D%A2%E8%A1%8C">输出的空格与换行：</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98">三，定义变量问题</a></li>
-<li><a href="#%E5%9B%9B-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%AF%94%E8%BE%83">四、浮点数的比较</a><br>
-*
-<ul>
-<li><a href="#1-%E8%BF%90%E7%AE%97%E7%AC%A6">1、== 运算符</a></li>
-<li><a href="#2-%E8%BF%90%E7%AE%97%E7%AC%A6">2、&gt; ，&lt; 运算符</a></li>
-<li><a href="#3-%E8%BF%90%E7%AE%97%E7%AC%A6">3、&gt;= ,&lt;= 运算符</a></li>
-<li><a href="#4-%E5%9C%86%E5%91%A8%E7%8E%87">4、圆周率</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BA%94-%E5%A4%8D%E6%9D%82%E5%BA%A6">五、复杂度</a><br>
-*
-<ul>
-<li><a href="#1-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">1、时间复杂度</a></li>
-<li><a href="#2-%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">2、空间复杂度</a></li>
-</ul>
-</li>
-</ul>
-
+                                
                             </div>
                             
                                 
@@ -356,7 +220,7 @@ for(int i=0;i&lt;n;i++)
 
                                             <p class="copyright-item">
                                                 <span>Permalink:</span>
-                                                <span><a href="https://yujieroot.github.io/post/za/">https://yujieroot.github.io/post/za/</a></span>
+                                                <span><a href="https://yujieroot.github.io/post/donate/">https://yujieroot.github.io/post/donate/</a></span>
                                             </p>
 
                                             <p class="copyright-item">
@@ -371,9 +235,9 @@ for(int i=0;i&lt;n;i++)
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yujieroot.github.io/post/za/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yujieroot.github.io/post/za/&sharesource=qzone&title=细节&pics=https://yujieroot.github.io//images/avatar.png?v=1582182930186&summary="><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://yujieroot.github.io/post/za/&sharesource=weibo&title=细节 + " - " + &pic="https://yujieroot.github.io//images/avatar.png?v=1582182930186 "><i class="fa fa-weibo "></i></a>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yujieroot.github.io/post/donate/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yujieroot.github.io/post/donate/&sharesource=qzone&title=donate&pics=https://yujieroot.github.io//images/avatar.png?v=1582182930186&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://yujieroot.github.io/post/donate/&sharesource=weibo&title=donate + " - " + &pic="https://yujieroot.github.io//images/avatar.png?v=1582182930186 "><i class="fa fa-weibo "></i></a>
                                                         
                                                             <div class="reward ">
                                                                 <div class="reward-button ">&yen;
@@ -390,12 +254,6 @@ for(int i=0;i&lt;n;i++)
                                                                         <span>Tag(s):</span>
                                                                         <span class="tag ">
                         
-                        
-                        <a href="https://yujieroot.github.io/tag/ANtm_x7bL/">#
-                                                tips
-                                                    </a>
-                                                    
-                                                        
                                                             </span>
                                                                     </div>
                                                                     <div>
@@ -408,15 +266,7 @@ for(int i=0;i&lt;n;i++)
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://yujieroot.github.io/post/rong-qi-shi-yong/">
-                                                                                            STL
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://yujieroot.github.io/post/pai-xu/">
-                                                                                                    十大经典排序算法
-                                                                                                </a>
-                                                                                                
                                                                                 </section>
                     </article>
                 </div>
