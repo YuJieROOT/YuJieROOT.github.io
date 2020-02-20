@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yujieroot.github.io/</id>
     <title>🎮&amp;🍺4A ブログ</title>
-    <updated>2020-02-14T09:09:49.643Z</updated>
+    <updated>2020-02-20T04:15:54.374Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yujieroot.github.io/"/>
     <link rel="self" href="https://yujieroot.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 🎮&amp;🍺4A ブログ</rights>
     <entry>
         <title type="html"><![CDATA[穷竭搜索]]></title>
-        <id>https://yujieroot.github.io/post/sou-suo</id>
-        <link href="https://yujieroot.github.io/post/sou-suo">
+        <id>https://yujieroot.github.io/post/sou-suo/</id>
+        <link href="https://yujieroot.github.io/post/sou-suo/">
         </link>
         <updated>2020-02-03T04:30:34.000Z</updated>
         <content type="html"><![CDATA[<h1 id="核心思想">核心思想</h1>
@@ -248,8 +248,8 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[STL]]></title>
-        <id>https://yujieroot.github.io/post/rong-qi-shi-yong</id>
-        <link href="https://yujieroot.github.io/post/rong-qi-shi-yong">
+        <id>https://yujieroot.github.io/post/rong-qi-shi-yong/</id>
+        <link href="https://yujieroot.github.io/post/rong-qi-shi-yong/">
         </link>
         <updated>2020-01-31T08:51:05.000Z</updated>
         <content type="html"><![CDATA[<h1 id="万能库">万能库</h1>
@@ -304,8 +304,8 @@ q.push((node){xx,yy,ss});
     </entry>
     <entry>
         <title type="html"><![CDATA[细节]]></title>
-        <id>https://yujieroot.github.io/post/za</id>
-        <link href="https://yujieroot.github.io/post/za">
+        <id>https://yujieroot.github.io/post/za/</id>
+        <link href="https://yujieroot.github.io/post/za/">
         </link>
         <updated>2020-01-29T07:59:24.000Z</updated>
         <content type="html"><![CDATA[<h1 id="一精度问题">一，精度问题</h1>
@@ -401,8 +401,8 @@ for(int i=0;i&lt;n;i++)
     </entry>
     <entry>
         <title type="html"><![CDATA[十大经典排序算法]]></title>
-        <id>https://yujieroot.github.io/post/pai-xu</id>
-        <link href="https://yujieroot.github.io/post/pai-xu">
+        <id>https://yujieroot.github.io/post/pai-xu/</id>
+        <link href="https://yujieroot.github.io/post/pai-xu/">
         </link>
         <updated>2020-01-22T07:31:44.000Z</updated>
         <content type="html"><![CDATA[<p>​    1.冒泡排序</p>
@@ -761,8 +761,8 @@ void Sort(vector&lt;int&gt; &amp;a)
     </entry>
     <entry>
         <title type="html"><![CDATA[数组]]></title>
-        <id>https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi</id>
-        <link href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi">
+        <id>https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi/</id>
+        <link href="https://yujieroot.github.io/post/shu-zu-de-chu-shi-hua-yu-ding-yi/">
         </link>
         <updated>2020-01-22T07:27:04.000Z</updated>
         <content type="html"><![CDATA[<h1 id="数组最好定义在main外"><strong>数组最好定义在main外：</strong></h1>
@@ -793,8 +793,8 @@ void Sort(vector&lt;int&gt; &amp;a)
     </entry>
     <entry>
         <title type="html"><![CDATA[String tips]]></title>
-        <id>https://yujieroot.github.io/post/string-tips</id>
-        <link href="https://yujieroot.github.io/post/string-tips">
+        <id>https://yujieroot.github.io/post/string-tips/</id>
+        <link href="https://yujieroot.github.io/post/string-tips/">
         </link>
         <updated>2020-01-22T07:13:46.000Z</updated>
         <content type="html"><![CDATA[<h1 id="1字符串逆转">1.字符串逆转：</h1>
@@ -834,8 +834,8 @@ str.clear();
     </entry>
     <entry>
         <title type="html"><![CDATA[Math tips]]></title>
-        <id>https://yujieroot.github.io/post/math-tips</id>
-        <link href="https://yujieroot.github.io/post/math-tips">
+        <id>https://yujieroot.github.io/post/math-tips/</id>
+        <link href="https://yujieroot.github.io/post/math-tips/">
         </link>
         <updated>2020-01-22T06:50:17.000Z</updated>
         <content type="html"><![CDATA[<h1 id="常用的math函数">常用的math函数</h1>
