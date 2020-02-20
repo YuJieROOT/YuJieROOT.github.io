@@ -13,7 +13,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <meta name="author" content="root">
 <meta name="description" content="长在五道口的随姬森林">
-<meta name="keywords" content="PKU,root&amp;shaw">
+<meta name="keywords" content="PKU">
 <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 <!--CDN样式-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
@@ -22,6 +22,9 @@
 <link rel="stylesheet" href="https://yujieroot.github.io//styles/main.css" />
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <!--点击特效-->
+    <script src="//cdn.itjoker.cn/CDN/js/love.min.js"></script>
+    
             <!--CDN样式-->
             <script src="//cdn.itjoker.cn/CDN/js/hit-kounter-lc-0.3.0.js"></script>
             <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
@@ -88,7 +91,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1582172142680" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1582172912627" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -107,7 +110,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1582172142680" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1582172912627" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -233,6 +236,21 @@ str.clear();
 
                         </div>
                         
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#1%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%80%86%E8%BD%AC">1.字符串逆转：</a></li>
+<li><a href="#2-string%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AF%BB%E5%85%A5">2. string类型的读入:</a></li>
+<li><a href="#3%E6%9F%A5%E6%89%BEt%E6%98%AF%E5%90%A6%E4%B8%BAs%E7%9A%84%E5%AD%90%E4%B8%B2">3.查找t是否为s的子串:</a></li>
+<li><a href="#4%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2">4.比较两个字符串</a></li>
+<li><a href="#5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%90%E5%8F%96">5.字符串提取</a></li>
+<li><a href="#6-%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2">6. 插入字符串</a></li>
+<li><a href="#7-%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2">7. 替换字符串</a></li>
+<li><a href="#8-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2">8. 删除字符串</a></li>
+<li><a href="#9-%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2">9. 交换字符串</a></li>
+</ul>
+
+                            </div>
+                            
                                 
                                     
                                             <!--zh-->
@@ -260,11 +278,19 @@ str.clear();
                         <i class="post-share"></i>
                         <span>&#x5206;&#x4EAB;:</span>
                                                                     <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yujieroot.github.io/post/string-tips/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yujieroot.github.io/post/string-tips/&sharesource=qzone&title=String tips&pics=https://yujieroot.github.io//images/avatar.png?v=1582172142680&summary="><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://yujieroot.github.io/post/string-tips/&sharesource=weibo&title=String tips + " - " + &pic="https://yujieroot.github.io//images/avatar.png?v=1582172142680 "><i class="fa fa-weibo "></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yujieroot.github.io/post/string-tips/&sharesource=qzone&title=String tips&pics=https://yujieroot.github.io//images/avatar.png?v=1582172912627&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://yujieroot.github.io/post/string-tips/&sharesource=weibo&title=String tips + " - " + &pic="https://yujieroot.github.io//images/avatar.png?v=1582172912627 "><i class="fa fa-weibo "></i></a>
 
                                                                     </span>
                                                                     
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://blog.itjoker.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://blog.itjoker.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
                                                                             <!--zh-->
                                                                             <section class="post-tags zh ">
                                                                                 <div>
@@ -312,6 +338,15 @@ str.clear();
         <footer id="footer" class="footer">
             <div class="copyright">
                 
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
                         Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
                             
                                 <b id="hitokoto"></b><br>
@@ -336,7 +371,7 @@ str.clear();
             </div>
             
                 <div id="version" style="display:none;">
-                    1.6.8
+                    1.7.0
                 </div>
                 
                     <script>
@@ -363,7 +398,7 @@ str.clear();
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1582172142680);
+                    newDate.setTime(1582172912627);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
